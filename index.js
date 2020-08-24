@@ -57,12 +57,8 @@ function dbCall(request) {
 
 }
 
-export const forgotPassword = () => {
-    return true;
-}
-
 //Date format validation
-export function isValidDate(dateString) {
+function isValidDate(dateString) {
     console.log(dateString)
     let regEx = /^\d{4}-\d{2}-\d{2}$/;
     return dateString.match(regEx) != null;
@@ -143,5 +139,3 @@ app.post("/api/test", async (req, res, next) => {
 app.listen(port, () => {
     console.log(`localhost:${port} -> Api is alive ! `);
 });
-
-export default index;
